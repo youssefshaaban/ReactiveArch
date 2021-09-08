@@ -1,0 +1,53 @@
+plugins {
+  id 'com.android.application'
+  id 'kotlin-android'
+}
+
+android {
+  compileSdk 30
+
+  defaultConfig {
+    applicationId Android.INSTANCE.applicationId
+    minSdkVersion Android.INSTANCE.minSDK
+    targetSdk Android.INSTANCE.targetSDK
+    versionCode Android.INSTANCE.versionCode
+    versionName Android.INSTANCE.versionName
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+  def localProperties=new Properties()
+  localProperties.load(new FileInputStream("local.properties"))
+
+  buildTypes{
+    debug {
+       resValue("string","google_api_key",localProperties['MAP_API_KEY'])
+    }
+  }
+
+}
+
+dependencies {
+
+  implementation Libs.INSTANCE.coreExt
+  implementation Libs.INSTANCE.appCompat
+  implementation Libs.INSTANCE.material
+  implementation Libs.INSTANCE.constraintLayout
+  implementation Libs.INSTANCE.googleMap
+  testImplementation TestLibs.INSTANCE.junit
+  androidTestImplementation TestLibs.INSTANCE.junitExt
+  androidTestImplementation TestLibs.INSTANCE.espresso
+}
