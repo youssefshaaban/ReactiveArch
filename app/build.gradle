@@ -1,6 +1,8 @@
 plugins {
   id 'com.android.application'
   id 'kotlin-android'
+  id 'kotlin-kapt'
+  id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -47,6 +49,18 @@ dependencies {
   implementation Libs.INSTANCE.material
   implementation Libs.INSTANCE.constraintLayout
   implementation Libs.INSTANCE.googleMap
+  implementation Libs.INSTANCE.locationServices
+  implementation Libs.INSTANCE.permissionsDispatcher
+  implementation Libs.INSTANCE.rxVersion
+  implementation Libs.INSTANCE.rxAndroid
+  implementation Libs.INSTANCE.rxAdapter
+  implementation Libs.INSTANCE.retrofit
+  implementation Libs.INSTANCE.gson
+  implementation Libs.INSTANCE.gsonConverter
+  kapt Libs.INSTANCE.permissionsDispatcherProcessor
+  implementation Libs.INSTANCE.timber
+  implementation Libs.INSTANCE.hiltAndroid
+  kapt Libs.INSTANCE.hiltAndroidCompiler
   testImplementation TestLibs.INSTANCE.junit
   androidTestImplementation TestLibs.INSTANCE.junitExt
   androidTestImplementation TestLibs.INSTANCE.espresso

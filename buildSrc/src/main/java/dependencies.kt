@@ -48,7 +48,7 @@ object Android {
   val versionCode = Versions.VERSION_CODE
   val versionName = Versions.VERSION_NAME
   val compileSDK = Versions.COMPILE_SDK
-  val applicationId = "com.ramadan.challenge"
+  val applicationId = "com.example.restaurant"
 }
 
 object Libs {

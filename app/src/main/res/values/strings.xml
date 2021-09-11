@@ -1,3 +1,15 @@
 <resources>
   <string name="app_name">ReactiveArch</string>
+  <string name="location_not_enable">Location is not enable</string>
+  <string name="enableLocation">enable location</string>
+  <string name="enable">enable</string>
+  <string name="deny">deny</string>
+  <string name="accept">accept</string>
+  <string name="location_denied">Location is denied</string>
+  <string name="location_alert">Location permission is need to be able to get the restaurant arround yo</string>
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="name">Name</string>
+  <string name="city">City</string>
+  <string name="address">Address</string>
 </resources>

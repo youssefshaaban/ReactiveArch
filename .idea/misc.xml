@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/projects/ReactiveArch/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/projects/ReactiveArch/app/src/main/res/layout/fragment_restaurant_detail.xml" value="0.1" />
         <entry key="..\:/projects/ReactiveArch/app/src/main/res/layout/fragment_restaurant_maps.xml" value="0.9068627450980392" />
       </map>
     </option>
